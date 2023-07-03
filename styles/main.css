@@ -57,3 +57,19 @@ header > img {
 .hero__text p {
   display: none;
 }
+
+.homeGrid {
+  padding: 0 20px;
+}
+
+.homeGrid h1 {
+  display: none;
+}
+
+ul {
+  padding: 60px 30px 60px 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
