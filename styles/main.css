@@ -73,3 +73,51 @@ ul {
 li {
   margin-bottom: 10px;
 }
+
+.homeGrid__grid h2 {
+  margin-bottom: 30px;
+}
+
+.homeGrid__categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.homeGrid__category {
+  display: grid;
+  position: relative;
+}
+
+.homeGrid__category:last-of-type {
+  grid-column: 1/3;
+}
+
+.homeGrid__category h3 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 1;
+  text-align: center;
+  align-self: end;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.homeGrid__category img {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.homeGrid__category-overlay {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
