@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #2a3d8c;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header > img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__right img {
+  width: 32px;
+}
