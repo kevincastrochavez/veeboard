@@ -122,6 +122,21 @@ li {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.homeGrid__usa {
+  margin: 30px 0;
+}
+
 .homeGrid__usa img {
   width: 100%;
+}
+
+.homeGrid__boards img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.homeGrid__boards h4 {
+  margin-top: 12px;
+  text-align: center;
 }
