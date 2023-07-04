@@ -6,7 +6,7 @@
 
 header {
   background-color: #2a3d8c;
-  padding: 20px;
+  padding: 16px 20px;
   display: flex;
   justify-content: space-between;
 }
