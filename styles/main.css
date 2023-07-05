@@ -212,6 +212,10 @@ li {
 }
 
 @media screen and (min-width: 768px) {
+  header {
+    padding: 20px 30px;
+  }
+
   .header__right {
     display: none;
   }
@@ -229,5 +233,46 @@ li {
 
   header nav a {
     font-size: 14px;
+  }
+
+  .hero img {
+    height: 400px;
+  }
+
+  .hero__text {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .homeGrid {
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  ul {
+    grid-column: 2/3;
+    grid-row: 1;
+  }
+
+  .homeGrid__grid {
+    display: none;
+  }
+
+  .homeGrid__boards {
+    grid-column: 3/4;
+    grid-row: 1;
+  }
+
+  .homeGrid__usa {
+    grid-column: 3/4;
+    grid-row: 2;
+  }
+
+  .homeGrid__testimonials {
+    grid-column: 2/3;
+    grid-row: 2;
   }
 }
