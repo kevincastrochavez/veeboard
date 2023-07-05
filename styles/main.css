@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 header {
@@ -196,4 +197,16 @@ li {
   font-size: 14px;
   margin-top: 12px;
   text-align: end;
+}
+
+@media screen and (min-width: 500px) {
+  header nav {
+    width: 50vw;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  header nav {
+    width: 45vw;
+  }
 }

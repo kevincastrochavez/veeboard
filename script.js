@@ -1,3 +1,4 @@
+const body = document.querySelector('body');
 const menuIcon = document.getElementById('menuIcon');
 const menu = document.querySelector('.header__right');
 const nav = document.querySelector('nav');
@@ -8,6 +9,7 @@ menuIcon.addEventListener('click', function () {
   openedMenu = !openedMenu;
 
   if (openedMenu) {
+    body.style.overflow = 'hidden';
     menuIcon.src = './assets/close.svg';
     nav.classList.add('showMenu');
 
@@ -17,12 +19,14 @@ menuIcon.addEventListener('click', function () {
 
     overlay.addEventListener('click', function () {
       openedMenu = !openedMenu;
+      body.style.overflow = 'unset';
       menuIcon.src = './assets/menu.svg';
       nav.classList.remove('showMenu');
 
       overlay.remove();
     });
   } else {
+    body.style.overflow = 'unset';
     menuIcon.src = './assets/menu.svg';
     nav.classList.remove('showMenu');
 
