@@ -1,9 +1,14 @@
 const body = document.querySelector('body');
+
 const menuIcon = document.getElementById('menuIcon');
 const menu = document.querySelector('.header__right');
 const nav = document.querySelector('nav');
 const header = document.querySelector('header');
+
+const cart = document.querySelector('.header__right');
+
 let openedMenu = false;
+let openedCart = false;
 
 menuIcon.addEventListener('click', function () {
   openedMenu = !openedMenu;
@@ -34,3 +39,9 @@ menuIcon.addEventListener('click', function () {
     overlay.remove();
   }
 });
+
+// cart.addEventListener('click', function () {
+//   console.log('Clicking cart');
+//   openedCart = !openedCart;
+
+// });
