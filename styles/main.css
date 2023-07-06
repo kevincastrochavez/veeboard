@@ -161,11 +161,13 @@ li {
 }
 
 .homeGrid__usa {
-  margin: 30px 0;
+  margin: 90px 0;
+  display: grid;
+  place-items: center;
 }
 
 .homeGrid__usa img {
-  width: 100%;
+  width: 70%;
 }
 
 .homeGrid__boards {
@@ -318,10 +320,10 @@ li {
   }
 
   .contact__container {
-    margin-top: 40px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
 
   .contact__container section {
@@ -345,5 +347,9 @@ li {
 
   .contact__container p {
     font-size: 14px;
+  }
+
+  .homeGrid__usa img {
+    width: 100%;
   }
 }
