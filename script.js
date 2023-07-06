@@ -5,10 +5,12 @@ const menu = document.querySelector('.header__right');
 const nav = document.querySelector('nav');
 const header = document.querySelector('header');
 
-const cart = document.querySelector('.header__right');
+const cartIcon = document.getElementById('openCart');
+const cart = document.querySelector('.header__cart');
+const cartClose = document.getElementById('closeCart');
 
 let openedMenu = false;
-let openedCart = false;
+// let openedCart = false;
 
 menuIcon.addEventListener('click', function () {
   openedMenu = !openedMenu;
@@ -40,8 +42,12 @@ menuIcon.addEventListener('click', function () {
   }
 });
 
-// cart.addEventListener('click', function () {
-//   console.log('Clicking cart');
-//   openedCart = !openedCart;
+cartIcon.addEventListener('click', function () {
+  body.style.overflowY = 'hidden';
+  cart.classList.add('showCart');
+});
 
-// });
+cartClose.addEventListener('click', function () {
+  body.style.overflowY = 'scroll';
+  cart.classList.remove('showCart');
+});

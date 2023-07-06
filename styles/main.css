@@ -64,6 +64,7 @@ header nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transform: translateX(100%);
 }
 
 .header__cart-top {
@@ -141,7 +142,8 @@ header nav {
   font-size: 20px;
 }
 
-.showMenu {
+.showMenu,
+.showCart {
   transform: translateX(0%);
 }
 
