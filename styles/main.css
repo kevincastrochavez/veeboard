@@ -61,6 +61,9 @@ header nav {
   background-color: #2a3d8c;
   z-index: 3;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header__cart-top {
@@ -68,7 +71,6 @@ header nav {
   justify-content: space-between;
   align-items: center;
   color: white;
-  margin-bottom: 40px;
 }
 
 .header__cart-top img {
@@ -78,7 +80,7 @@ header nav {
 .header__cart-products {
   display: grid;
   gap: 40px;
-  height: calc(100svh - 200px);
+  height: calc(100svh - 250px);
   overflow-y: scroll;
 }
 
@@ -122,6 +124,21 @@ header nav {
 
 .header__cart-quantity img {
   width: 25px;
+}
+
+.header__cart-bottom {
+  background-color: white;
+  padding: 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.header__cart-bottom a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  text-align: center;
+  font-size: 20px;
 }
 
 .showMenu {
