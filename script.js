@@ -10,7 +10,6 @@ const cart = document.querySelector('.header__cart');
 const cartClose = document.getElementById('closeCart');
 
 let openedMenu = false;
-// let openedCart = false;
 
 menuIcon.addEventListener('click', function () {
   openedMenu = !openedMenu;
@@ -48,6 +47,16 @@ cartIcon.addEventListener('click', function () {
 });
 
 cartClose.addEventListener('click', function () {
+  if (openedMenu) {
+    openedMenu = !openedMenu;
+    body.style.overflow = 'unset';
+    menuIcon.src = './assets/menu.svg';
+    nav.classList.remove('showMenu');
+
+    const overlay = document.querySelector('.overlayMenu');
+    overlay.remove();
+  }
+
   body.style.overflowY = 'scroll';
   cart.classList.remove('showCart');
 });
