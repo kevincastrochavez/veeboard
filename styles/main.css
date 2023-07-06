@@ -132,6 +132,10 @@ li {
   gap: 8px;
 }
 
+.homeGrid__categories a {
+  text-decoration: none;
+}
+
 .homeGrid__category {
   display: grid;
   position: relative;
