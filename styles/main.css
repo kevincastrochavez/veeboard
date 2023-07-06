@@ -199,6 +199,10 @@ li {
   text-align: end;
 }
 
+.homeGrid__contact {
+  display: none;
+}
+
 @media screen and (min-width: 500px) {
   header nav {
     width: 50vw;
@@ -292,5 +296,54 @@ li {
     grid-column: 2/3;
     grid-row: 2;
     margin: 0;
+  }
+
+  .homeGrid__contact {
+    display: block;
+    grid-row: 1/3;
+
+    background-color: #2a3d8c;
+    color: white;
+    padding: 20px;
+  }
+
+  .homeGrid__contact a {
+    color: white;
+    font-size: 14px;
+  }
+
+  .homeGrid__contact a span {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .contact__container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact__container section {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 20px;
+    row-gap: 4px;
+  }
+
+  .contact__container h3 {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  .contact__container img {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    width: 40px;
+    align-self: center;
+  }
+
+  .contact__container p {
+    font-size: 14px;
   }
 }
