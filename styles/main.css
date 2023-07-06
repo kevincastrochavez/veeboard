@@ -5,6 +5,10 @@
   font-family: sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header {
   background-color: #2a3d8c;
   padding: 16px 20px;
@@ -15,7 +19,7 @@ header {
   justify-content: space-between;
 }
 
-.header__wrapper > img {
+.header__wrapper a > img {
   width: 48px;
   height: 48px;
   object-fit: cover;
@@ -86,13 +90,15 @@ header nav a {
   align-self: end;
   background-color: #2a3d8c;
   padding: 16px;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .hero__text h2 {
-  text-align: center;
   color: white;
   font-size: 20px;
+  border-bottom: 2px solid white;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .hero__text p {
@@ -108,7 +114,7 @@ header nav a {
 }
 
 ul {
-  padding: 60px 30px 60px 20px;
+  padding: 40px 30px 60px 20px;
 }
 
 li {
@@ -223,6 +229,7 @@ li {
 @media screen and (min-width: 768px) {
   header {
     padding: 20px 30px;
+    background-color: white;
   }
 
   .header__right {
@@ -238,10 +245,24 @@ li {
     width: unset;
     text-align: unset;
     padding: 0 0 0 20px;
+    background-color: white;
   }
 
   header nav a {
+    color: black;
     font-size: 14px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease-in-out;
+  }
+
+  header nav a:hover {
+    color: black;
+    font-size: 14px;
+    border-bottom: 3px solid #2a3d8c;
+  }
+
+  .active {
+    border-bottom: 3px solid #2a3d8c;
   }
 
   .hero img {
@@ -366,6 +387,7 @@ li {
 
   .homeGrid {
     gap: 40px;
+    grid-template-columns: auto 1fr 1fr;
   }
 
   .contact__container {

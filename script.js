@@ -9,7 +9,7 @@ menuIcon.addEventListener('click', function () {
   openedMenu = !openedMenu;
 
   if (openedMenu) {
-    body.style.overflow = 'hidden';
+    body.style.overflowY = 'hidden';
     menuIcon.src = './assets/close.svg';
     nav.classList.add('showMenu');
 
@@ -19,7 +19,7 @@ menuIcon.addEventListener('click', function () {
 
     overlay.addEventListener('click', function () {
       openedMenu = !openedMenu;
-      body.style.overflow = 'unset';
+      body.style.overflowY = 'unset';
       menuIcon.src = './assets/menu.svg';
       nav.classList.remove('showMenu');
 
