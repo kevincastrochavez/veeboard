@@ -65,6 +65,7 @@ header nav {
   flex-direction: column;
   justify-content: space-between;
   transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
 }
 
 .header__cart-top {
