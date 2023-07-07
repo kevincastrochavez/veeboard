@@ -232,9 +232,9 @@ li {
   position: relative;
 }
 
-.homeGrid__category:last-of-type {
+/* .homeGrid__category:last-of-type {
   grid-column: 1/3;
-}
+} */
 
 .homeGrid__category h3 {
   grid-column: 1/2;
