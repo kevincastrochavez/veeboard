@@ -9,6 +9,8 @@ body {
   overflow-x: hidden;
 }
 
+/* FOOTER CODE */
+
 header {
   background-color: #2a3d8c;
   padding: 16px 20px;
@@ -164,6 +166,8 @@ header nav a {
   text-align: end;
 }
 
+/* HOMEPAGE CODE */
+
 .hero {
   display: grid;
 }
@@ -310,6 +314,8 @@ li {
   display: none;
 }
 
+/* HEADER CODE FOR MEDIAQUERIES */
+
 @media screen and (min-width: 500px) {
   header nav {
     width: 50vw;
@@ -382,6 +388,8 @@ li {
   .active {
     border-bottom: 3px solid #2a3d8c;
   }
+
+  /* HOMEPAGE CODE FOR MEDIAQUERIES */
 
   .hero img {
     height: 400px;
@@ -504,6 +512,8 @@ li {
   }
 }
 
+/* HEADER CODE */
+
 @media screen and (min-width: 900px) {
   .header__wrapper {
     max-width: 1200px;
@@ -514,6 +524,8 @@ li {
   .header__cart {
     left: 60%;
   }
+
+  /* HOMEPAGE CODE */
 
   .homeGrid {
     gap: 40px;
@@ -526,15 +538,19 @@ li {
 }
 
 @media screen and (min-width: 1260px) {
+  /* HEADER CODE */
+
+  .header__cart {
+    left: 70%;
+  }
+
+  /* HOMEPAGE CODE */
+
   .homeGrid {
     gap: 60px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 30px 0 0;
-  }
-
-  .header__cart {
-    left: 70%;
   }
 
   .homeGrid__usa img {
