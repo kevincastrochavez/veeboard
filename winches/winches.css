@@ -331,6 +331,10 @@ header nav a {
     background-color: transparent;
   }
 
+  #searchIcon {
+    cursor: pointer;
+  }
+
   .winches__products {
     margin-top: 60px;
     grid-column: 1/3;

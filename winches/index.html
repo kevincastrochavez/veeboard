@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="../script.js" defer></script>
+    <script src="./winches.js" defer></script>
     <link rel="stylesheet" href="./winches.css" />
     <title>Winches | VeeBoard</title>
   </head>
@@ -177,9 +178,13 @@
       </p>
 
       <div class="winches__search">
-        <input type="text" />
+        <input id="searchInput" type="text" />
 
-        <img src="../assets/magnify.svg" alt="Search icon for products" />
+        <img
+          id="searchIcon"
+          src="../assets/magnify.svg"
+          alt="Search icon for products"
+        />
       </div>
 
       <div class="winches__products">
