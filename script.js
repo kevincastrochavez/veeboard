@@ -16,7 +16,7 @@ menuIcon.addEventListener('click', function () {
 
   if (openedMenu) {
     body.style.overflowY = 'hidden';
-    menuIcon.src = './assets/close.svg';
+    menuIcon.src = '/assets/close.svg';
     nav.classList.add('showMenu');
 
     const overlay = document.createElement('div');
@@ -26,14 +26,14 @@ menuIcon.addEventListener('click', function () {
     overlay.addEventListener('click', function () {
       openedMenu = !openedMenu;
       body.style.overflowY = 'unset';
-      menuIcon.src = './assets/menu.svg';
+      menuIcon.src = '/assets/menu.svg';
       nav.classList.remove('showMenu');
 
       overlay.remove();
     });
   } else {
     body.style.overflow = 'unset';
-    menuIcon.src = './assets/menu.svg';
+    menuIcon.src = '/assets/menu.svg';
     nav.classList.remove('showMenu');
 
     const overlay = document.querySelector('.overlayMenu');
@@ -50,7 +50,7 @@ cartClose.addEventListener('click', function () {
   if (openedMenu) {
     openedMenu = !openedMenu;
     body.style.overflow = 'unset';
-    menuIcon.src = './assets/menu.svg';
+    menuIcon.src = '/assets/menu.svg';
     nav.classList.remove('showMenu');
 
     const overlay = document.querySelector('.overlayMenu');
