@@ -348,6 +348,54 @@ header nav a {
   }
 
   /* CART CODE FOR MEDIAQUERIES */
+  .cart__product {
+    display: flex;
+  }
+
+  .cart__product > img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cart__product-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cart__product-info h2 {
+    margin: 0;
+  }
+
+  .cart__product-description {
+    display: block !important;
+  }
+
+  .cart__product-info > div {
+    margin: 0;
+  }
+
+  .cart__product-info div p {
+    display: none;
+  }
+
+  .cart__product-info div:first-of-type {
+    order: 5;
+  }
+
+  .cart__product-quantity {
+    margin: 0;
+    order: 4;
+  }
+
+  .cart-quantity {
+    gap: 4px;
+  }
+
+  .cart-quantity p {
+    display: block !important;
+  }
 }
 
 /* HEADER CODE */
