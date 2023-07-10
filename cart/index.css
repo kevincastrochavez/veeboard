@@ -179,6 +179,7 @@ header nav a {
 .cart__products {
   display: grid;
   gap: 20px;
+  margin-bottom: 140px;
 }
 
 .cart__product {
@@ -205,6 +206,26 @@ header nav a {
 
 .cart__product-info p:last-of-type {
   margin: 0;
+}
+
+.cart__buttons {
+  padding: 20px 0;
+  position: fixed;
+  right: 20px;
+  left: 20px;
+  bottom: 0;
+  display: grid;
+  gap: 16px;
+  background-color: white;
+}
+
+.cart__buttons a {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  background-color: #2a3d8c;
+  color: white;
 }
 
 /* HEADER CODE FOR MEDIAQUERIES */
