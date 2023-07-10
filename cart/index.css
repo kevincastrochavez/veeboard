@@ -198,10 +198,14 @@ header nav a {
   margin-bottom: 20px;
 }
 
-.cart__product-info p {
+.cart__product-info > div {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
+}
+
+.cart__product-description {
+  display: none !important;
 }
 
 .cart__product-info p:last-of-type {
@@ -213,6 +217,7 @@ header nav a {
   align-items: center;
   justify-content: space-between;
   margin-top: 16px;
+  margin-bottom: 0 !important;
 }
 
 .cart-quantity {
