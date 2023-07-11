@@ -29,9 +29,9 @@ const categoriesArray = [
   },
 ];
 
-// Category template
 const categoryHtml = (categories) => {
   const result = categories.map((category) => {
+    // Category template
     return `<a href="/${category.link}" class="homeGrid__category">
       <h3>${category.category}</h3>
 
