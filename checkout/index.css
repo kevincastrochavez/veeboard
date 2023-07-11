@@ -87,6 +87,42 @@ fieldset {
   outline-width: 0;
 }
 
+.checkout__amount {
+  margin-top: 20px;
+}
+
+.checkout__subtotal,
+.checkout__taxes,
+.checkout__total {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  justify-content: flex-end;
+  margin: 10px 0;
+}
+
+.checkout__subtotal p,
+.checkout__taxes p,
+.checkout__total p {
+  justify-self: end;
+}
+
+.checkout__subtotal span,
+.checkout__taxes span,
+.checkout__total span {
+  justify-self: end;
+}
+
+.btnSubmit {
+  padding: 12px;
+  width: 100%;
+  margin: 40px 0 20px;
+  font-size: 20px;
+  background-color: #2a3d8c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
 /* HEADER CODE FOR MEDIAQUERIES */
 
 @media screen and (min-width: 500px) {
