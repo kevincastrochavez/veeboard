@@ -17,7 +17,7 @@ const categoriesArray = [
   },
   {
     category: 'Rachets & Straps',
-    link: 'brickGuards',
+    link: 'straps',
     imageUrl: './assets/strap.jpg',
     altImage: 'Strap category',
   },
