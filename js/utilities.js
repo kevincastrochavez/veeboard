@@ -94,7 +94,7 @@ const headerCartHtml = (products) => {
 const productsResponse = await fetch('../products.json');
 const productsData = await productsResponse.json();
 
-// HTML with products ready to be injected
+// products HTML code ready to be injected
 const productsInHeaderCart = headerCartHtml(productsData).join(' ');
 
 export function loadHeader() {
@@ -133,7 +133,7 @@ export function loadHeader() {
     // Injecting products into header cart
     cartProductsContainer.innerHTML = productsInHeaderCart;
 
-    // Clicking menu
+    // Clicking menu logic
     menuIcon.addEventListener('click', function () {
       openedMenu = !openedMenu;
 
