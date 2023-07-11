@@ -3,10 +3,11 @@ import { loadHeader } from './utilities.js';
 loadHeader();
 
 const productsResponse = await fetch('../products.json');
-const productsData = await productsResponse.json();
+const productsData = null;
+// const productsData = await productsResponse.json();
 
 const productsHtml = (products) => {
-  const result = products.map((product) => {
+  const result = products?.map((product) => {
     // Product Item template
     return `
         <div class="cart__product">
@@ -52,7 +53,15 @@ const productsHtml = (products) => {
 
   return result;
 };
-const cartProductsContainer = document.querySelector('.cart__products');
 
-const products = productsHtml(productsData).join(' ');
+// Getting total items price
+const totalPrice = productsData
+  ?.map((product) => product.price * product.quantity)
+  .reduce((acc, curr) => acc + curr);
+
+const cartProductsContainer = document.querySelector('.cart__products');
+const cartTotal = document.getElementById('total');
+
+const products = productsHtml(productsData)?.join(' ');
+cartTotal.innerHTML = `$${totalPrice ?? 0}`;
 cartProductsContainer.innerHTML = products;
