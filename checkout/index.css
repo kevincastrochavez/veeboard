@@ -100,12 +100,6 @@ fieldset {
   margin: 10px 0;
 }
 
-.checkout__subtotal p,
-.checkout__taxes p,
-.checkout__total p {
-  justify-self: end;
-}
-
 .checkout__subtotal span,
 .checkout__taxes span,
 .checkout__total span {
@@ -147,7 +141,49 @@ fieldset {
     gap: 30px;
   }
 
-  /* CART CODE FOR MEDIAQUERIES */
+  /* CHECKOUT CODE FOR MEDIAQUERIES */
+  .checkout {
+    padding: 30px 30px 60px;
+  }
+
+  .checkout form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+
+  .checkout__payment {
+    margin-top: 40px;
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .checkout__amount {
+    position: fixed;
+    right: 30px;
+    bottom: 150px;
+  }
+
+  #cardCcv {
+    margin-bottom: 0;
+  }
+
+  .checkout__subtotal,
+  .checkout__taxes,
+  .checkout__total {
+    grid-template-columns: 100px 80px;
+  }
+
+  .btnSubmit {
+    height: fit-content;
+    margin: 0;
+    cursor: pointer;
+    padding: 16px 60px;
+    width: fit-content;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+  }
 }
 
 /* HEADER CODE */
