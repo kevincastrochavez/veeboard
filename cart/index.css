@@ -181,6 +181,10 @@ header nav a {
   gap: 20px;
 }
 
+.cart__products > p a {
+  color: #2a3d8c;
+}
+
 .cart__product {
   display: grid;
   grid-template-columns: 1fr 2fr;

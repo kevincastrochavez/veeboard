@@ -3,8 +3,7 @@ import { loadHeader } from './utilities.js';
 loadHeader();
 
 const productsResponse = await fetch('../products.json');
-const productsData = null;
-// const productsData = await productsResponse.json();
+const productsData = await productsResponse.json();
 
 const productsHtml = (products) => {
   const result = products?.map((product) => {
@@ -54,14 +53,20 @@ const productsHtml = (products) => {
   return result;
 };
 
+const emptyCartState = `
+    <p>Your Cart is empty. <a href="/">Let's go shopping!</a></p>
+`;
+
 // Getting total items price
 const totalPrice = productsData
   ?.map((product) => product.price * product.quantity)
   .reduce((acc, curr) => acc + curr);
 
+// Grabbing DOM elements
 const cartProductsContainer = document.querySelector('.cart__products');
 const cartTotal = document.getElementById('total');
 
+// Injecting code into site
 const products = productsHtml(productsData)?.join(' ');
 cartTotal.innerHTML = `$${totalPrice ?? 0}`;
-cartProductsContainer.innerHTML = products;
+cartProductsContainer.innerHTML = products ?? emptyCartState;
