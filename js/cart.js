@@ -53,6 +53,7 @@ const productsHtml = (products) => {
   return result;
 };
 
+// Empty state for when cart is empty
 const emptyCartState = `
     <p>Your Cart is empty. <a href="/">Let's go shopping!</a></p>
 `;
