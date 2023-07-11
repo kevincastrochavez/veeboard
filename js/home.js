@@ -29,6 +29,7 @@ const categoriesArray = [
   },
 ];
 
+// Category template
 const categoryHtml = (categories) => {
   const result = categories.map((category) => {
     return `<a href="/${category.link}" class="homeGrid__category">
@@ -45,5 +46,6 @@ const categoryHtml = (categories) => {
 
 const categoriesContainer = document.querySelector('.homeGrid__categories');
 
+// Injecting categories into DOM
 const categoriesHtml = categoryHtml(categoriesArray).join(' ');
 categoriesContainer.innerHTML = categoriesHtml;
