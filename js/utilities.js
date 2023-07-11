@@ -65,7 +65,7 @@ const headerHtml = `
 `;
 
 // Template code for the cart items in the header
-const headerCartHtml = (products) => {
+const headerCartProductsHtml = (products) => {
   const result = products.map((product) => {
     return `<section class="header__cart-product">
       <img src="${product.imageUrl}" alt="${product.description}" />
@@ -95,7 +95,7 @@ const productsResponse = await fetch('../products.json');
 const productsData = await productsResponse.json();
 
 // products HTML code ready to be injected
-const productsInHeaderCart = headerCartHtml(productsData).join(' ');
+const productsInHeaderCart = headerCartProductsHtml(productsData).join(' ');
 
 export function loadHeader() {
   const currentPageUrl = window.location.href.split('/').pop();
