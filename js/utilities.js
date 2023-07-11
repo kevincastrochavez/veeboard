@@ -23,18 +23,18 @@ const linksArray = [
 
 const headerHtml = `
   <div class="header__wrapper">
-    <a href="/"><img src="./assets/veeboard.jpg" alt="VeeBoards Logo" /></a>
+    <a href="/"><img src="/assets/veeboard.jpg" alt="VeeBoards Logo" /></a>
 
     <div class="header__right">
       <img
         id="openCart"
-        src="./assets/cart.svg"
+        src="/assets/cart.svg"
         alt="Cart Icon for reviewing the cart"
       />
 
       <img
         id="menuIcon"
-        src="./assets/menu.svg"
+        src="/assets/menu.svg"
         alt="Menu Hamburger Icon"
       />
     </div>
@@ -48,99 +48,99 @@ const headerHtml = `
 
         <img
           id="closeCart"
-          src="./assets/close.svg"
+          src="/assets/close.svg"
           alt="Closing icon for cart"
         />
       </div>
 
       <div class="header__cart-products">
         <section class="header__cart-product">
-          <img src="./assets/strap.jpg" alt="Product image" />
+          <img src="/assets/strap.jpg" alt="Product image" />
           <h4>This is a long Product Description about such product</h4>
           <p>$<span>15.99</span></p>
           <div class="header__cart-quantity">
             <img
-              src="./assets/minus.svg"
+              src="/assets/minus.svg"
               alt="Icon for decreasing quantity of product"
             />
 
             <p>2</p>
 
             <img
-              src="./assets/plus.svg"
+              src="/assets/plus.svg"
               alt="Icon for increasing quantity of product"
             />
           </div>
         </section>
         <section class="header__cart-product">
-          <img src="./assets/strap.jpg" alt="Product image" />
+          <img src="/assets/strap.jpg" alt="Product image" />
           <h4>This is a long Product Description about such product</h4>
           <p>$<span>15.99</span></p>
           <div class="header__cart-quantity">
             <img
-              src="./assets/minus.svg"
+              src="/assets/minus.svg"
               alt="Icon for decreasing quantity of product"
             />
 
             <p>2</p>
 
             <img
-              src="./assets/plus.svg"
+              src="/assets/plus.svg"
               alt="Icon for increasing quantity of product"
             />
           </div>
         </section>
         <section class="header__cart-product">
-          <img src="./assets/strap.jpg" alt="Product image" />
+          <img src="/assets/strap.jpg" alt="Product image" />
           <h4>This is a long Product Description about such product</h4>
           <p>$<span>15.99</span></p>
           <div class="header__cart-quantity">
             <img
-              src="./assets/minus.svg"
+              src="/assets/minus.svg"
               alt="Icon for decreasing quantity of product"
             />
 
             <p>2</p>
 
             <img
-              src="./assets/plus.svg"
+              src="/assets/plus.svg"
               alt="Icon for increasing quantity of product"
             />
           </div>
         </section>
         <section class="header__cart-product">
-          <img src="./assets/strap.jpg" alt="Product image" />
+          <img src="/assets/strap.jpg" alt="Product image" />
           <h4>This is a long Product Description about such product</h4>
           <p>$<span>15.99</span></p>
           <div class="header__cart-quantity">
             <img
-              src="./assets/minus.svg"
+              src="/assets/minus.svg"
               alt="Icon for decreasing quantity of product"
             />
 
             <p>2</p>
 
             <img
-              src="./assets/plus.svg"
+              src="/assets/plus.svg"
               alt="Icon for increasing quantity of product"
             />
           </div>
         </section>
 
         <section class="header__cart-product">
-          <img src="./assets/strap.jpg" alt="Product image" />
+          <img src="/assets/strap.jpg" alt="Product image" />
           <h4>This is a long Product Description about such product</h4>
           <p>$<span>15.99</span></p>
           <div class="header__cart-quantity">
             <img
-              src="./assets/minus.svg"
+              src="/assets/minus.svg"
               alt="Icon for decreasing quantity of product"
             />
 
             <p>2</p>
 
             <img
-              src="./assets/plus.svg"
+              src="/assets/plus.svg"
               alt="Icon for increasing quantity of product"
             />
           </div>
