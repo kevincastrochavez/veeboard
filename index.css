@@ -75,10 +75,11 @@ header nav {
   justify-content: space-between;
   align-items: center;
   color: white;
+  padding-top: 8px;
 }
 
 .header__cart-top img {
-  width: 36px;
+  width: 28px;
 }
 
 .header__cart-products {
