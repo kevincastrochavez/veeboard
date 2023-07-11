@@ -1,0 +1,238 @@
+const linksArray = [
+  {
+    pageName: 'Home',
+    path: '',
+  },
+  {
+    pageName: 'Winches',
+    path: '/winches',
+  },
+  {
+    pageName: 'Steel Corners',
+    path: '/steelCorners',
+  },
+  {
+    pageName: 'Brick Guards',
+    path: '/brickGuards',
+  },
+  {
+    pageName: 'Rachets & Straps',
+    path: '/straps',
+  },
+];
+
+const headerHtml = `
+  <div class="header__wrapper">
+    <a href="/"><img src="./assets/veeboard.jpg" alt="VeeBoards Logo" /></a>
+
+    <div class="header__right">
+      <img
+        id="openCart"
+        src="./assets/cart.svg"
+        alt="Cart Icon for reviewing the cart"
+      />
+
+      <img
+        id="menuIcon"
+        src="./assets/menu.svg"
+        alt="Menu Hamburger Icon"
+      />
+    </div>
+
+    <nav>
+    </nav>
+
+    <section class="header__cart">
+      <div class="header__cart-top">
+        <h2>Cart Contents</h2>
+
+        <img
+          id="closeCart"
+          src="./assets/close.svg"
+          alt="Closing icon for cart"
+        />
+      </div>
+
+      <div class="header__cart-products">
+        <section class="header__cart-product">
+          <img src="./assets/strap.jpg" alt="Product image" />
+          <h4>This is a long Product Description about such product</h4>
+          <p>$<span>15.99</span></p>
+          <div class="header__cart-quantity">
+            <img
+              src="./assets/minus.svg"
+              alt="Icon for decreasing quantity of product"
+            />
+
+            <p>2</p>
+
+            <img
+              src="./assets/plus.svg"
+              alt="Icon for increasing quantity of product"
+            />
+          </div>
+        </section>
+        <section class="header__cart-product">
+          <img src="./assets/strap.jpg" alt="Product image" />
+          <h4>This is a long Product Description about such product</h4>
+          <p>$<span>15.99</span></p>
+          <div class="header__cart-quantity">
+            <img
+              src="./assets/minus.svg"
+              alt="Icon for decreasing quantity of product"
+            />
+
+            <p>2</p>
+
+            <img
+              src="./assets/plus.svg"
+              alt="Icon for increasing quantity of product"
+            />
+          </div>
+        </section>
+        <section class="header__cart-product">
+          <img src="./assets/strap.jpg" alt="Product image" />
+          <h4>This is a long Product Description about such product</h4>
+          <p>$<span>15.99</span></p>
+          <div class="header__cart-quantity">
+            <img
+              src="./assets/minus.svg"
+              alt="Icon for decreasing quantity of product"
+            />
+
+            <p>2</p>
+
+            <img
+              src="./assets/plus.svg"
+              alt="Icon for increasing quantity of product"
+            />
+          </div>
+        </section>
+        <section class="header__cart-product">
+          <img src="./assets/strap.jpg" alt="Product image" />
+          <h4>This is a long Product Description about such product</h4>
+          <p>$<span>15.99</span></p>
+          <div class="header__cart-quantity">
+            <img
+              src="./assets/minus.svg"
+              alt="Icon for decreasing quantity of product"
+            />
+
+            <p>2</p>
+
+            <img
+              src="./assets/plus.svg"
+              alt="Icon for increasing quantity of product"
+            />
+          </div>
+        </section>
+
+        <section class="header__cart-product">
+          <img src="./assets/strap.jpg" alt="Product image" />
+          <h4>This is a long Product Description about such product</h4>
+          <p>$<span>15.99</span></p>
+          <div class="header__cart-quantity">
+            <img
+              src="./assets/minus.svg"
+              alt="Icon for decreasing quantity of product"
+            />
+
+            <p>2</p>
+
+            <img
+              src="./assets/plus.svg"
+              alt="Icon for increasing quantity of product"
+            />
+          </div>
+        </section>
+      </div>
+
+      <div class="header__cart-bottom">
+        <a href="/cart">View Cart</a>
+      </div>
+    </section>
+  </div>
+`;
+
+export function loadHeader() {
+  const currentPageUrl = window.location.href.split('/').pop();
+
+  window.addEventListener('load', () => {
+    // Inject header code into header tag
+    const headerContainer = document.getElementById('header');
+    headerContainer.innerHTML = headerHtml;
+
+    // Grabbing DOM elements
+    const body = document.querySelector('body');
+
+    const menuIcon = document.getElementById('menuIcon');
+    const nav = document.querySelector('nav');
+    const header = document.querySelector('header');
+
+    const cartIcon = document.getElementById('openCart');
+    const cart = document.querySelector('.header__cart');
+    const cartClose = document.getElementById('closeCart');
+
+    let openedMenu = false;
+
+    // Injecting links into nav
+    const dynamicLinksArray = linksArray.map(
+      (link) =>
+        `<a ${currentPageUrl === link.path && 'class="active"'} href="${
+          link.path
+        }">${link.pageName}</a>`
+    );
+    nav.innerHTML = dynamicLinksArray.join(' ');
+
+    // Clicking menu
+    menuIcon.addEventListener('click', function () {
+      openedMenu = !openedMenu;
+
+      if (openedMenu) {
+        body.style.overflowY = 'hidden';
+        menuIcon.src = '/assets/close.svg';
+        nav.classList.add('showMenu');
+
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlayMenu');
+        header.appendChild(overlay);
+
+        overlay.addEventListener('click', function () {
+          openedMenu = !openedMenu;
+          body.style.overflowY = 'unset';
+          menuIcon.src = '/assets/menu.svg';
+          nav.classList.remove('showMenu');
+
+          overlay.remove();
+        });
+      } else {
+        body.style.overflow = 'unset';
+        menuIcon.src = '/assets/menu.svg';
+        nav.classList.remove('showMenu');
+
+        const overlay = document.querySelector('.overlayMenu');
+        overlay.remove();
+      }
+    });
+
+    cartIcon.addEventListener('click', function () {
+      body.style.overflowY = 'hidden';
+      cart.classList.add('showCart');
+    });
+
+    cartClose.addEventListener('click', function () {
+      if (openedMenu) {
+        openedMenu = !openedMenu;
+        body.style.overflow = 'unset';
+        menuIcon.src = '/assets/menu.svg';
+        nav.classList.remove('showMenu');
+
+        const overlay = document.querySelector('.overlayMenu');
+        overlay.remove();
+      }
+
+      body.style.overflowY = 'scroll';
+      cart.classList.remove('showCart');
+    });
+  });
+}
