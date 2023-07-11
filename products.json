@@ -1,0 +1,26 @@
+[
+  {
+    "imageUrl": "/assets/strap.jpg",
+    "description": "This is a long Product Description about such product",
+    "price": 15.99,
+    "quantity": 2
+  },
+  {
+    "imageUrl": "/assets/strap.jpg",
+    "description": "This is a long Product Description about such product",
+    "price": 15.99,
+    "quantity": 2
+  },
+  {
+    "imageUrl": "/assets/strap.jpg",
+    "description": "This is a long Product Description about such product",
+    "price": 15.99,
+    "quantity": 2
+  },
+  {
+    "imageUrl": "/assets/strap.jpg",
+    "description": "This is a long Product Description about such product",
+    "price": 15.99,
+    "quantity": 2
+  }
+]

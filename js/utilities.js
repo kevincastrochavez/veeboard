@@ -1,3 +1,4 @@
+// Dynamic links
 const linksArray = [
   {
     pageName: 'Home',
@@ -21,6 +22,7 @@ const linksArray = [
   },
 ];
 
+// Template code for the header
 const headerHtml = `
   <div class="header__wrapper">
     <a href="/"><img src="/assets/veeboard.jpg" alt="VeeBoards Logo" /></a>
@@ -53,99 +55,7 @@ const headerHtml = `
         />
       </div>
 
-      <div class="header__cart-products">
-        <section class="header__cart-product">
-          <img src="/assets/strap.jpg" alt="Product image" />
-          <h4>This is a long Product Description about such product</h4>
-          <p>$<span>15.99</span></p>
-          <div class="header__cart-quantity">
-            <img
-              src="/assets/minus.svg"
-              alt="Icon for decreasing quantity of product"
-            />
-
-            <p>2</p>
-
-            <img
-              src="/assets/plus.svg"
-              alt="Icon for increasing quantity of product"
-            />
-          </div>
-        </section>
-        <section class="header__cart-product">
-          <img src="/assets/strap.jpg" alt="Product image" />
-          <h4>This is a long Product Description about such product</h4>
-          <p>$<span>15.99</span></p>
-          <div class="header__cart-quantity">
-            <img
-              src="/assets/minus.svg"
-              alt="Icon for decreasing quantity of product"
-            />
-
-            <p>2</p>
-
-            <img
-              src="/assets/plus.svg"
-              alt="Icon for increasing quantity of product"
-            />
-          </div>
-        </section>
-        <section class="header__cart-product">
-          <img src="/assets/strap.jpg" alt="Product image" />
-          <h4>This is a long Product Description about such product</h4>
-          <p>$<span>15.99</span></p>
-          <div class="header__cart-quantity">
-            <img
-              src="/assets/minus.svg"
-              alt="Icon for decreasing quantity of product"
-            />
-
-            <p>2</p>
-
-            <img
-              src="/assets/plus.svg"
-              alt="Icon for increasing quantity of product"
-            />
-          </div>
-        </section>
-        <section class="header__cart-product">
-          <img src="/assets/strap.jpg" alt="Product image" />
-          <h4>This is a long Product Description about such product</h4>
-          <p>$<span>15.99</span></p>
-          <div class="header__cart-quantity">
-            <img
-              src="/assets/minus.svg"
-              alt="Icon for decreasing quantity of product"
-            />
-
-            <p>2</p>
-
-            <img
-              src="/assets/plus.svg"
-              alt="Icon for increasing quantity of product"
-            />
-          </div>
-        </section>
-
-        <section class="header__cart-product">
-          <img src="/assets/strap.jpg" alt="Product image" />
-          <h4>This is a long Product Description about such product</h4>
-          <p>$<span>15.99</span></p>
-          <div class="header__cart-quantity">
-            <img
-              src="/assets/minus.svg"
-              alt="Icon for decreasing quantity of product"
-            />
-
-            <p>2</p>
-
-            <img
-              src="/assets/plus.svg"
-              alt="Icon for increasing quantity of product"
-            />
-          </div>
-        </section>
-      </div>
+      <div class="header__cart-products"></div>
 
       <div class="header__cart-bottom">
         <a href="/cart">View Cart</a>
@@ -153,6 +63,39 @@ const headerHtml = `
     </section>
   </div>
 `;
+
+// Template code for the cart items in the header
+const headerCartHtml = (products) => {
+  const result = products.map((product) => {
+    return `<section class="header__cart-product">
+      <img src="${product.imageUrl}" alt="${product.description}" />
+      <h4>${product.description}</h4>
+      <p>$<span>${product.price}</span></p>
+      <div class="header__cart-quantity">
+        <img
+          src="/assets/minus.svg"
+          alt="Icon for decreasing quantity of product"
+        />
+    
+        <p>${product.quantity}</p>
+    
+        <img
+          src="/assets/plus.svg"
+          alt="Icon for increasing quantity of product"
+        />
+      </div>
+    </section>`;
+  });
+
+  return result;
+};
+
+// Fetching products from 'server' (fetch them from the session)
+const productsResponse = await fetch('../products.json');
+const productsData = await productsResponse.json();
+
+// HTML with products ready to be injected
+const productsInHeaderCart = headerCartHtml(productsData).join(' ');
 
 export function loadHeader() {
   const currentPageUrl = window.location.href.split('/').pop();
@@ -171,6 +114,9 @@ export function loadHeader() {
 
     const cartIcon = document.getElementById('openCart');
     const cart = document.querySelector('.header__cart');
+    const cartProductsContainer = document.querySelector(
+      '.header__cart-products'
+    );
     const cartClose = document.getElementById('closeCart');
 
     let openedMenu = false;
@@ -183,6 +129,9 @@ export function loadHeader() {
         }">${link.pageName}</a>`
     );
     nav.innerHTML = dynamicLinksArray.join(' ');
+
+    // Injecting products into header cart
+    cartProductsContainer.innerHTML = productsInHeaderCart;
 
     // Clicking menu
     menuIcon.addEventListener('click', function () {
