@@ -130,11 +130,9 @@ export function loadHeader() {
     // Injecting links into nav
     const dynamicLinksArray = linksArray.map(
       (link) =>
-        `<a ${
-          categoryParam === link.categoryPath && 'class="active"'
-        } href="/categories/index.html?category=${link.categoryPath}">${
-          link.pageName
-        }</a>`
+        `<a ${categoryParam === link.categoryPath && 'class="active"'} href="${
+          link.categoryPath == '' ? '/' : '/categories/index.html?category='
+        }${link.categoryPath}">${link.pageName}</a>`
     );
     nav.innerHTML = dynamicLinksArray.join(' ');
 
