@@ -5,25 +5,25 @@ loadHeader();
 const categoriesArray = [
   {
     category: 'Brick Guards',
-    link: 'brickGuards',
+    link: 'categories/index.html?category=brickGuards',
     imageUrl: './assets/brick.jpg',
     altImage: 'Brick category',
   },
   {
     category: 'Steel Corners',
-    link: 'steelCorners',
+    link: 'categories/index.html?category=steelCorners',
     imageUrl: './assets/steel.jpg',
     altImage: 'Steel Corners category',
   },
   {
     category: 'Rachets & Straps',
-    link: 'straps',
+    link: 'categories/index.html?category=straps',
     imageUrl: './assets/strap.jpg',
     altImage: 'Strap category',
   },
   {
     category: 'Winches',
-    link: 'winches',
+    link: 'categories/index.html?category=winches',
     imageUrl: './assets/winch.jpg',
     altImage: 'Winches category',
   },

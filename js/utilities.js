@@ -6,19 +6,19 @@ const linksArray = [
   },
   {
     pageName: 'Winches',
-    path: '/winches',
+    path: 'winches',
   },
   {
     pageName: 'Steel Corners',
-    path: '/steelCorners',
+    path: 'steelCorners',
   },
   {
     pageName: 'Brick Guards',
-    path: '/brickGuards',
+    path: 'brickGuards',
   },
   {
     pageName: 'Rachets & Straps',
-    path: '/straps',
+    path: 'straps',
   },
 ];
 
@@ -98,7 +98,8 @@ const productsData = await productsResponse.json();
 const productsInHeaderCart = headerCartProductsHtml(productsData).join(' ');
 
 export function loadHeader() {
-  const currentPageUrl = window.location.href.split('/').pop();
+  const currentPageUrl = window.location.href.split('=');
+  console.log(currentPageUrl);
 
   window.addEventListener('load', () => {
     // Inject header code into header tag
@@ -124,9 +125,11 @@ export function loadHeader() {
     // Injecting links into nav
     const dynamicLinksArray = linksArray.map(
       (link) =>
-        `<a ${currentPageUrl === link.path && 'class="active"'} href="${
-          link.path
-        }">${link.pageName}</a>`
+        `<a ${
+          currentPageUrl === link.path && 'class="active"'
+        } href="categories/index.html?category=${link.path}">${
+          link.pageName
+        }</a>`
     );
     nav.innerHTML = dynamicLinksArray.join(' ');
 
