@@ -92,6 +92,10 @@ header nav {
   overflow-y: scroll;
 }
 
+.header__cart-products::-webkit-scrollbar {
+  display: none;
+}
+
 .header__cart-product {
   display: grid;
   grid-template-columns: 2fr 3fr;
@@ -136,11 +140,11 @@ header nav {
 
 .header__cart-bottom {
   background-color: white;
-  padding: 16px;
   border-radius: 50px;
 }
 
 .header__cart-bottom a {
+  padding: 16px;
   text-decoration: none;
   color: black;
   display: block;
@@ -226,7 +230,7 @@ header nav a {
     width: 45vw;
   }
 
-  /* WINCHES PAGE CODE */
+  /* PRODUCTS PAGE CODE */
   .products__container {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -289,11 +293,16 @@ header nav a {
     padding: 30px;
   }
 
+  #openCart,
+  #closeCart {
+    cursor: pointer;
+  }
+
   .active {
     border-bottom: 3px solid #2a3d8c;
   }
 
-  /* WINCHES CODE */
+  /* PRODUCTS CODE */
   #products {
     display: grid;
     grid-template-columns: 1fr 1fr;

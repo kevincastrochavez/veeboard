@@ -92,6 +92,10 @@ header nav {
   overflow-y: scroll;
 }
 
+.header__cart-products::-webkit-scrollbar {
+  display: none;
+}
+
 .header__cart-product {
   display: grid;
   grid-template-columns: 2fr 3fr;
@@ -365,6 +369,11 @@ header nav a {
   .header__cart {
     left: 50%;
     padding: 30px;
+  }
+
+  #openCart,
+  #closeCart {
+    cursor: pointer;
   }
 
   .active {

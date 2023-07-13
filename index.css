@@ -13,7 +13,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* FOOTER CODE */
+/* HEADER CODE */
 
 header {
   background-color: #2a3d8c;
@@ -141,11 +141,11 @@ header nav {
 
 .header__cart-bottom {
   background-color: white;
-  padding: 16px;
   border-radius: 50px;
 }
 
 .header__cart-bottom a {
+  padding: 16px;
   text-decoration: none;
   color: black;
   display: block;
@@ -244,10 +244,6 @@ li {
   display: grid;
   position: relative;
 }
-
-/* .homeGrid__category:last-of-type {
-  grid-column: 1/3;
-} */
 
 .homeGrid__category h3 {
   grid-column: 1/2;
@@ -392,6 +388,11 @@ li {
   .header__cart {
     left: 50%;
     padding: 30px;
+  }
+
+  #openCart,
+  #closeCart {
+    cursor: pointer;
   }
 
   .active {
