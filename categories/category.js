@@ -1,3 +1,7 @@
+import { loadHeader } from '../js/utilities.js';
+
+loadHeader();
+
 const searchInput = document.getElementById('searchInput');
 const searchIcon = document.getElementById('searchIcon');
 

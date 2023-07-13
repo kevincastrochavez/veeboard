@@ -90,6 +90,12 @@ const headerCartProductsHtml = (products) => {
   return result;
 };
 
+const getCategoryParam = (param) => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  return urlParams.get(param);
+};
+
 // Fetching products from 'server' (fetch them from the session)
 const productsResponse = await fetch('../products.json');
 const productsData = await productsResponse.json();
@@ -98,8 +104,7 @@ const productsData = await productsResponse.json();
 const productsInHeaderCart = headerCartProductsHtml(productsData).join(' ');
 
 export function loadHeader() {
-  const currentPageUrl = window.location.href.split('=');
-  console.log(currentPageUrl);
+  const categoryParam = getCategoryParam('category');
 
   window.addEventListener('load', () => {
     // Inject header code into header tag
@@ -126,7 +131,7 @@ export function loadHeader() {
     const dynamicLinksArray = linksArray.map(
       (link) =>
         `<a ${
-          currentPageUrl === link.path && 'class="active"'
+          categoryParam === link.path && 'class="active"'
         } href="categories/index.html?category=${link.path}">${
           link.pageName
         }</a>`
