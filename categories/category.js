@@ -40,7 +40,7 @@ const { heading, subheading } = categoriesText.find(
 // Product template array from current page category
 const productCategoryTemplate = (categoryInventory) => {
   const result = categoryInventory.map((product) => {
-    return `<a href="/winches/230049" class="winches__products-product">
+    return `<a href="/winches/230049" class="products-product">
       <img src="${product.imageUrl}" alt="${product.description}" />
       <div class="productInfo">
         <h2>${product.partNumber}</h2>
@@ -70,7 +70,7 @@ const categoryHtmlTemplate = `
     ${subheading}
   </p>
 
-  <div class="winches__search">
+  <div class="products__search">
     <input id="searchInput" type="text" />
 
     <img
@@ -80,7 +80,7 @@ const categoryHtmlTemplate = `
     />
   </div>
 
-  <div class="winches__products">
+  <div class="products__container">
     
   </div>
 `;
@@ -88,7 +88,7 @@ const categoryHtmlTemplate = `
 const categoryContainer = document.getElementById('products');
 categoryContainer.innerHTML = categoryHtmlTemplate;
 
-const productsContainer = document.querySelector('.winches__products');
+const productsContainer = document.querySelector('.products__container');
 productsContainer.innerHTML = productsHtmlReady;
 
 // const searchInput = document.getElementById('searchInput');
