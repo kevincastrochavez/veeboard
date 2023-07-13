@@ -132,7 +132,7 @@ export function loadHeader() {
       (link) =>
         `<a ${
           categoryParam === link.categoryPath && 'class="active"'
-        } href="categories/index.html?category=${link.categoryPath}">${
+        } href="/categories/index.html?category=${link.categoryPath}">${
           link.pageName
         }</a>`
     );
