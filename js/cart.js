@@ -2,7 +2,7 @@ import { loadHeader } from './utilities.js';
 
 loadHeader();
 
-const productsResponse = await fetch('../products.json');
+const productsResponse = await fetch('../cartProducts.json');
 const productsData = await productsResponse.json();
 
 const productsHtml = (products) => {

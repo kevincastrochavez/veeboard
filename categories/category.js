@@ -34,6 +34,16 @@ const { heading, subheading } = categoriesText.find(
   (category) => category.categoryPath === currentCategory
 );
 
+const productCategoryTemplate = `
+  <a href="/winches/230049" class="winches__products-product">
+    <img src="../assets/winch.jpg" alt="" />
+    <div class="productInfo">
+      <h2>417CE</h2>
+      <p>4" x 27' Winch Strap with 18" chain</p>
+    </div>
+  </a>
+`;
+
 const categoryHtmlTemplate = `
   <h1>${heading}</h1>
 
@@ -52,13 +62,7 @@ const categoryHtmlTemplate = `
   </div>
 
   <div class="winches__products">
-    <a href="/winches/230049" class="winches__products-product">
-      <img src="../assets/winch.jpg" alt="" />
-      <div class="productInfo">
-        <h2>417CE</h2>
-        <p>4" x 27' Winch Strap with 18" chain</p>
-      </div>
-    </a>
+    
   </div>
 `;
 

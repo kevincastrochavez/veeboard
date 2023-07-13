@@ -97,7 +97,7 @@ export const getCategoryParam = (param) => {
 };
 
 // Fetching products from 'server' (fetch them from the session)
-const productsResponse = await fetch('../products.json');
+const productsResponse = await fetch('../cartProducts.json');
 const productsData = await productsResponse.json();
 
 // products HTML code ready to be injected
