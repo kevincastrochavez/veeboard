@@ -167,11 +167,11 @@ header nav a {
 }
 
 /* WINCHES CODE */
-.winches {
+#products {
   padding: 30px 20px;
 }
 
-.winches > p {
+#products > p {
   margin: 12px 0 60px;
 }
 
