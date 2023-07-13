@@ -2,23 +2,23 @@
 const linksArray = [
   {
     pageName: 'Home',
-    path: '',
+    categoryPath: '',
   },
   {
     pageName: 'Winches',
-    path: 'winches',
+    categoryPath: 'winches',
   },
   {
     pageName: 'Steel Corners',
-    path: 'steelCorners',
+    categoryPath: 'steelCorners',
   },
   {
     pageName: 'Brick Guards',
-    path: 'brickGuards',
+    categoryPath: 'brickGuards',
   },
   {
     pageName: 'Rachets & Straps',
-    path: 'straps',
+    categoryPath: 'straps',
   },
 ];
 
@@ -90,7 +90,7 @@ const headerCartProductsHtml = (products) => {
   return result;
 };
 
-const getCategoryParam = (param) => {
+export const getCategoryParam = (param) => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   return urlParams.get(param);
@@ -131,8 +131,8 @@ export function loadHeader() {
     const dynamicLinksArray = linksArray.map(
       (link) =>
         `<a ${
-          categoryParam === link.path && 'class="active"'
-        } href="categories/index.html?category=${link.path}">${
+          categoryParam === link.categoryPath && 'class="active"'
+        } href="categories/index.html?category=${link.categoryPath}">${
           link.pageName
         }</a>`
     );
