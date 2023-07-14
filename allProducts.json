@@ -4,7 +4,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "401CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "winches"
   },
   {
@@ -12,7 +12,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "402CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "winches"
   },
   {
@@ -20,7 +20,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "403CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "winches"
   },
   {
@@ -28,7 +28,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "404CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "winches"
   },
   {
@@ -36,7 +36,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "405CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "winches"
   },
   {
@@ -44,7 +44,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "406CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "winches"
   },
   {
@@ -52,7 +52,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "407CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "straps"
   },
   {
@@ -60,7 +60,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "408CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "straps"
   },
   {
@@ -68,7 +68,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "409CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "straps"
   },
   {
@@ -76,7 +76,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "410CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "straps"
   },
   {
@@ -84,7 +84,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "411CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "straps"
   },
   {
@@ -92,7 +92,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "412CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "straps"
   },
   {
@@ -100,7 +100,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "413CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "straps"
   },
   {
@@ -108,7 +108,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "414CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "steelCorners"
   },
   {
@@ -116,7 +116,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "415CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "steelCorners"
   },
   {
@@ -124,7 +124,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "416CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "steelCorners"
   },
   {
@@ -132,7 +132,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "417CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "steelCorners"
   },
   {
@@ -140,7 +140,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "418CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "steelCorners"
   },
   {
@@ -148,7 +148,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "419CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "steelCorners"
   },
   {
@@ -156,7 +156,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "420CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "steelCorners"
   },
   {
@@ -164,7 +164,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "421CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "steelCorners"
   },
   {
@@ -172,7 +172,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "422CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "brickGuards"
   },
   {
@@ -180,7 +180,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "423CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "brickGuards"
   },
   {
@@ -188,7 +188,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "424CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "brickGuards"
   },
   {
@@ -196,7 +196,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "425CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "brickGuards"
   },
   {
@@ -204,7 +204,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "426CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "brickGuards"
   },
   {
@@ -212,7 +212,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "427CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "brickGuards"
   },
   {
@@ -220,7 +220,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "428CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "brickGuards"
   },
   {
@@ -228,7 +228,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "429CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "brickGuards"
   },
   {
@@ -236,7 +236,7 @@
     "description": "This is a long Product Description about such product",
     "price": 15.99,
     "partNumber": "430CE",
-    "colors": ["Blue", "Red", "Green"],
+    "colors": ["blue", "red", "green"],
     "category": "brickGuards"
   }
 ]

@@ -2,10 +2,69 @@ import { loadHeader, getParam } from '../js/utilities.js';
 
 loadHeader();
 
+// Getting partNumber from url
 const partNumberParam = getParam('partNumber');
-console.log(partNumberParam);
 
-// Fetching products from 'database' according to partNumber
+// Fetching products from 'database' according to partNumber and finding single product
 const productResponse = await fetch('../allProducts.json');
 const productData = await productResponse.json();
-const singleProduct = console.log(productData);
+const singleProduct = productData.find(
+  (product) => product.partNumber === partNumberParam
+);
+
+// Input Color HTML template
+const inputColorTemplate = (color) => {
+  const result = `<input type="radio" name="color" class="input-${color}" />`;
+
+  return result;
+};
+
+// Get one input for each color and join them to generate HTML
+const inputColorsArray = singleProduct?.colors?.map((color) =>
+  inputColorTemplate(color)
+);
+const inputColorsHtml = inputColorsArray.join(' ');
+
+// Single product HTML template
+const singleProductTemplate = (productData) => {
+  const result = `
+        <img src="${productData.imageUrl}" alt="${productData.description}" />
+
+        <h1>${productData.partNumber}</h1>
+
+        <p class="product__description">${productData.description}</p>
+
+        <p class="product__price">
+        Price: $<span id="productPrice">${productData.price}</span>
+        </p>
+
+        <div class="product__quantity">
+        <img
+            src="../assets/minus.svg"
+            alt="Icon for decreasing quantity of product"
+        />
+
+        <p>2</p>
+
+        <img
+            src="../assets/plus.svg"
+            alt="Icon for increasing quantity of product"
+        />
+        </div>
+
+        <div class="product__color">
+        <p>Color:</p>
+
+        <div class="product__colors">
+            ${inputColorsHtml}
+        </div>
+        </div>
+
+        <div class="product__add">Add to Cart</div>
+    `;
+
+  return result;
+};
+
+const singleProductContainer = document.querySelector('.product__wrapper');
+singleProductContainer.innerHTML = singleProductTemplate(singleProduct);
