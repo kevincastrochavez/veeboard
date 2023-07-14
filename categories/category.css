@@ -189,7 +189,7 @@ header nav a {
 
 .products__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
@@ -223,16 +223,15 @@ header nav a {
   header nav {
     width: 50vw;
   }
+
+  .products__container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (min-width: 600px) {
   header nav {
     width: 45vw;
-  }
-
-  /* PRODUCTS PAGE CODE */
-  .products__container {
-    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -349,6 +348,7 @@ header nav a {
   }
 
   .products__container {
+    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 60px;
     grid-column: 1/3;
   }
