@@ -1,4 +1,4 @@
-import { loadHeader, getCategoryParam } from '../js/utilities.js';
+import { loadHeader, getParam } from '../js/utilities.js';
 
 loadHeader();
 
@@ -30,7 +30,7 @@ const categoriesText = [
 ];
 
 // Getting current page category from params
-const currentCategory = getCategoryParam('category');
+const currentCategory = getParam('category');
 
 // Getting heading and subheadings according to category
 const { heading, subheading } = categoriesText.find(
@@ -40,7 +40,7 @@ const { heading, subheading } = categoriesText.find(
 // Product template array from current page category
 const productCategoryTemplate = (categoryInventory) => {
   const result = categoryInventory.map((product) => {
-    return `<a href="/winches/230049" class="products-product">
+    return `<a href="/products/index.html?partNumber=${product.partNumber}" class="products-product">
       <img src="${product.imageUrl}" alt="${product.description}" />
       <div class="productInfo">
         <h2>${product.partNumber}</h2>

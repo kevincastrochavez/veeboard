@@ -90,7 +90,7 @@ const headerCartProductsHtml = (products) => {
   return result;
 };
 
-export const getCategoryParam = (param) => {
+export const getParam = (param) => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   return urlParams.get(param);
@@ -104,7 +104,7 @@ const productsData = await productsResponse.json();
 const productsInHeaderCart = headerCartProductsHtml(productsData).join(' ');
 
 export function loadHeader() {
-  const categoryParam = getCategoryParam('category');
+  const categoryParam = getParam('category');
 
   window.addEventListener('load', () => {
     // Inject header code into header tag
