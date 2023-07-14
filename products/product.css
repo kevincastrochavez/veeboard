@@ -338,9 +338,8 @@ header nav a {
   }
 
   .product__add {
-    padding: 16px;
     width: 300px;
-    font-size: 20px;
+    cursor: pointer;
   }
 }
 
