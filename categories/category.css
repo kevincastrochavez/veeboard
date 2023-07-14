@@ -141,6 +141,8 @@ header nav {
 .header__cart-bottom {
   background-color: white;
   border-radius: 50px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
 }
 
 .header__cart-bottom a {
@@ -290,6 +292,15 @@ header nav a {
   .header__cart {
     left: 50%;
     padding: 30px;
+  }
+
+  .header__cart-bottom:hover {
+    border: 2px solid white;
+    background-color: #2a3d8c;
+  }
+
+  .header__cart-bottom a:hover {
+    color: white;
   }
 
   #openCart,
