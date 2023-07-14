@@ -215,6 +215,25 @@ header nav a {
   align-items: center;
 }
 
+.product__colors label {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+/* .product__colors input {
+  display: none;
+}
+
+.product__colors input:checked.product__colors label {
+  box-shadow: 0 0 0 3px #f4f4f4, 0 0 0 6px #006039;
+} */
+
+/* input[type='radio']:checked {
+  border: 1px solid black;
+} */
+
 .product__add {
   padding: 20px;
   background-color: #2a3d8c;

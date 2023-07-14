@@ -14,7 +14,7 @@ const singleProduct = productData.find(
 
 // Input Color HTML template
 const inputColorTemplate = (color) => {
-  const result = `<input type="radio" name="color" class="input-${color}" />`;
+  const result = `<label for="${color}Input" style="background-color: ${color};" class="input-label"><input type="radio" name="color" id="${color}Input" class="input-${color}" /></label>`;
 
   return result;
 };
