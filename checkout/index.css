@@ -119,6 +119,7 @@ fieldset {
   color: white;
   border: none;
   border-radius: 4px;
+  border: 2px solid transparent;
 }
 
 /* HEADER CODE FOR MEDIAQUERIES */
@@ -166,6 +167,7 @@ fieldset {
     position: fixed;
     right: 30px;
     bottom: 150px;
+    width: 239px;
   }
 
   #cardCcv {
@@ -175,10 +177,12 @@ fieldset {
   .checkout__subtotal,
   .checkout__taxes,
   .checkout__total {
-    grid-template-columns: 100px 80px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .btnSubmit {
+    transition: all 0.3s ease-in-out;
     height: fit-content;
     margin: 0;
     cursor: pointer;
@@ -187,6 +191,12 @@ fieldset {
     position: fixed;
     bottom: 60px;
     right: 30px;
+  }
+
+  .btnSubmit:hover {
+    border: 2px solid #2a3d8c;
+    background-color: white;
+    color: black;
   }
 }
 
