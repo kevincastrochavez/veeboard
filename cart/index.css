@@ -312,6 +312,8 @@ header nav a {
   background-color: #2a3d8c;
   color: white;
   border-radius: 4px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
 }
 
 .cart__buttons a:first-of-type {
@@ -485,6 +487,18 @@ header nav a {
 
   .cart__buttons a {
     width: 200px;
+  }
+
+  .cart__buttons a:hover {
+    border: 2px solid #2a3d8c;
+    background-color: white;
+    color: black;
+  }
+
+  .cart__buttons a:first-of-type:hover {
+    border: 2px solid #2a3d8c;
+    background-color: #2a3d8c;
+    color: white;
   }
 
   .cart__total {
