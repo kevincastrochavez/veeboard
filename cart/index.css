@@ -200,7 +200,7 @@ header nav a {
 }
 
 .cart__product:last-of-type {
-  margin-bottom: 200px;
+  margin-bottom: 210px;
 }
 
 .cart__product img {
@@ -256,6 +256,15 @@ header nav a {
 
 .cart__product-quantity {
   display: flex;
+}
+
+.cart__divider {
+  height: 20px;
+  position: fixed;
+  bottom: 202px;
+  right: 20px;
+  left: 20px;
+  background-color: white;
 }
 
 .cart__total {
