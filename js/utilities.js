@@ -105,6 +105,7 @@ const productsInHeaderCart = headerCartProductsHtml(productsData).join(' ');
 
 export function loadHeader() {
   const categoryParam = getParam('category');
+  console.log(categoryParam);
 
   window.addEventListener('load', () => {
     // Inject header code into header tag
