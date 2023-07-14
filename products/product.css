@@ -235,10 +235,10 @@ header nav a {
 } */
 
 .product__add {
-  padding: 20px;
+  padding: 12px;
   background-color: #2a3d8c;
   color: white;
-  font-size: 30px;
+  font-size: 16px;
   text-align: center;
   border-radius: 4px;
   margin-top: 30px;
