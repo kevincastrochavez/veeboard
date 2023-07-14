@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./product.js" type="module"></script>
+    <link rel="stylesheet" href="./product.css" />
+    <title>Winches | 9238923</title>
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <main>
+      <section class="product__wrapper">
+        <img src="../assets//brick.jpg" alt="Product image" />
+
+        <h1>427CE</h1>
+
+        <p class="product__description">4" x 27' Winch Strap with 18" chain</p>
+
+        <p class="product__price">
+          Price: $<span id="productPrice">19.99</span>
+        </p>
+
+        <div class="product__quantity">
+          <img
+            src="../assets/minus.svg"
+            alt="Icon for decreasing quantity of product"
+          />
+
+          <p>2</p>
+
+          <img
+            src="../assets/plus.svg"
+            alt="Icon for increasing quantity of product"
+          />
+        </div>
+
+        <div class="product__color">
+          <p>Color:</p>
+
+          <div class="product__colors">
+            <input type="radio" name="color" id="blue" />
+            <input type="radio" name="color" id="red" />
+            <input type="radio" name="color" id="green" />
+            <input type="radio" name="color" id="purple" />
+          </div>
+        </div>
+
+        <div class="product__add">Add to Cart</div>
+      </section>
+    </main>
+  </body>
+</html>

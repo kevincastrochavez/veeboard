@@ -296,6 +296,11 @@ header nav a {
     padding: 30px;
   }
 
+  #openCart,
+  #closeCart {
+    cursor: pointer;
+  }
+
   .active {
     border-bottom: 3px solid #2a3d8c;
   }
