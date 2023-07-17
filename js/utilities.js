@@ -1,4 +1,4 @@
-// Dynamic links
+// Dynamic navigation links
 const linksArray = [
   {
     pageName: 'Home',
@@ -123,15 +123,15 @@ const productsInHeaderCart = headerCartProductsHtml(productsData).join(' ');
 export function loadHeaderAndFooter() {
   const categoryParam = getParam('category');
 
+  // Inject header code into header tag
+  const headerContainer = document.getElementById('header');
+  headerContainer.innerHTML = headerHtml;
+
+  // Inject footer code into footer tag
+  const footerContainer = document.getElementById('footer');
+  footerContainer.innerHTML = footerHtml;
+
   window.addEventListener('load', () => {
-    // Inject header code into header tag
-    const headerContainer = document.getElementById('header');
-    headerContainer.innerHTML = headerHtml;
-
-    // Inject footer code into footer tag
-    const footerContainer = document.getElementById('footer');
-    footerContainer.innerHTML = footerHtml;
-
     // Grabbing DOM elements
     const body = document.querySelector('body');
 

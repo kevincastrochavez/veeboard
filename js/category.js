@@ -91,12 +91,14 @@ categoryContainer.innerHTML = categoryHtmlTemplate;
 const productsContainer = document.querySelector('.products__container');
 productsContainer.innerHTML = productsHtmlReady;
 
-// const searchInput = document.getElementById('searchInput');
-// const searchIcon = document.getElementById('searchIcon');
+// SEARCHING LOGIC
 
-// searchIcon.addEventListener('click', () => {
-//   if (searchInput.value.trim() !== '') {
-//     // TODO: Include logic for search
-//     console.log('Something');
-//   }
-// });
+const searchInput = document.getElementById('searchInput');
+const searchIcon = document.getElementById('searchIcon');
+
+searchIcon.addEventListener('click', () => {
+  if (searchInput.value.trim() !== '') {
+    // TODO: Include logic for search
+    console.log('Something');
+  }
+});
