@@ -1,6 +1,6 @@
-import { loadHeader } from './utilities.js';
+import { loadHeaderAndFooter } from './utilities.js';
 
-loadHeader();
+loadHeaderAndFooter();
 
 const productsResponse = await fetch('../cartProducts.json');
 const productsData = await productsResponse.json();

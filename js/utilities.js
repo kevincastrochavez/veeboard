@@ -90,6 +90,23 @@ const headerCartProductsHtml = (products) => {
   return result;
 };
 
+// Template code for the footer
+const footerHtml = `
+  <div class="footer__wrapper">
+    <a href="https://www.facebook.com" target="_blank">
+      <img src="/assets/facebook.svg" alt="Facebook link icon" />
+      <p>
+        Share your VeeBoards pictures and experiences with other drivers!
+      </p>
+    </a>
+
+    <span
+      >VeeBoards.com is a subsidiary of Bartleet Trading International, LLC
+      &copy; Copyright ${new Date().getFullYear()} VeeBoards.com. All rights reserved.</span
+    >
+  </div>
+`;
+
 export const getParam = (param) => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -103,14 +120,17 @@ const productsData = await productsResponse.json();
 // products HTML code ready to be injected
 const productsInHeaderCart = headerCartProductsHtml(productsData).join(' ');
 
-export function loadHeader() {
+export function loadHeaderAndFooter() {
   const categoryParam = getParam('category');
-  console.log(categoryParam);
 
   window.addEventListener('load', () => {
     // Inject header code into header tag
     const headerContainer = document.getElementById('header');
     headerContainer.innerHTML = headerHtml;
+
+    // Inject footer code into footer tag
+    const footerContainer = document.getElementById('footer');
+    footerContainer.innerHTML = footerHtml;
 
     // Grabbing DOM elements
     const body = document.querySelector('body');

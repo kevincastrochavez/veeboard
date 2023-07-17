@@ -1,6 +1,6 @@
-import { loadHeader, getParam } from './utilities.js';
+import { loadHeaderAndFooter, getParam } from './utilities.js';
 
-loadHeader();
+loadHeaderAndFooter();
 
 // Getting partNumber from url
 const partNumberParam = getParam('partNumber');
