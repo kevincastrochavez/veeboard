@@ -213,6 +213,7 @@ header nav a {
     transform: translateX(0);
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
     overflow: initial;
     width: unset;
     text-align: unset;
